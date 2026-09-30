@@ -56,6 +56,8 @@ The operator interacts with the system through a dedicated **Control Panel**, wh
 
 ## 3. System Architecture
 
+![Consolidation Engine System Architecture](screenshots/06-system-architecture.png)
+
 ### Input Layer
 Multiple `.xlsx` source files are discovered from the input workflow and processed through VBA.
 
@@ -91,8 +93,6 @@ The workbook is organized into focused VBA modules:
 | `mod_Utilities` | Logging and shared helper routines |
 | `mod_Config` | Configuration access |
 | `mod_Protection` | Worksheet protection and controlled VBA writing |
-
-This separation keeps the automation easier to test, troubleshoot, and extend.
 
 ---
 
@@ -215,35 +215,25 @@ The project is intended as a portfolio simulation and does **not** represent pro
 
 ## 11. Project Screenshots
 
-Recommended portfolio gallery:
+### Control Panel
 
-```text
-screenshots/
-├── 01-control-panel.png
-├── 02-dashboard.png
-├── 03-master-data.png
-├── 04-import-log.png
-├── 05-data-quality-log.png
-└── 06-system-architecture.png
-```
+![Control Panel](screenshots/01-control-panel.png)
 
-The architecture image should illustrate:
+### Dashboard
 
-```text
-Input Files
-   ↓
-RunFullImport
-   ↓
-ProcessOneFile
-   ↓
-Import → Mapping → Validation → Deduplication
-   ↓
-AppendToMaster
-   ↓
-Import Log + Data Quality Log
-   ↓
-Dashboard
-```
+![Dashboard](screenshots/02-dashboard.png)
+
+### Master Data
+
+![Master Data](screenshots/03-master-data.png)
+
+### Import Log
+
+![Import Log](screenshots/04-import-log.png)
+
+### Data Quality Log
+
+![Data Quality Log](screenshots/05-data-quality-log.png)
 
 ---
 
@@ -260,24 +250,14 @@ Building this system reinforced several practical lessons:
 
 ---
 
-## 13. Future Enhancements
+## 13. Portfolio Demonstration
 
-Potential next versions could introduce:
+The repository also contains:
 
-- user-selectable input folders
-- configurable business-key definitions
-- stronger error recovery and retry handling
-- automated email/report distribution
-- Power Query or Power BI integration
-- database-backed master storage
-- scheduled execution through an external orchestration layer
+- the final `.xlsm` application
+- exported VBA source modules
+- supporting screenshots
+- a portfolio case study
+- a video demonstration placeholder
 
----
-
-## 14. Author
-
-**Lukman Oyewo**  
-Aeronautical & Astronautical Engineer | Data Analytics | Excel VBA | Power BI | SQL | Python  
-Lagos, Nigeria
-
----
+The interactive narrated project demonstration will be added in the `video/` folder as the portfolio package is finalized.
